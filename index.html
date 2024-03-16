@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Payment</title>
+</head>
+<body>
+    <h1>Subscribe to Our Service</h1>
+    <form action="YOUR_XSOLLA_API_ENDPOINT" method="post">
+        <input type="hidden" name="access_token" value="YOUR_XSOLLA_ACCESS_TOKEN">
+        <input type="hidden" name="project_id" value="YOUR_XSOLLA_PROJECT_ID">
+        <input type="hidden" name="plan_id" value="SUBSCRIPTION_PLAN_ID">
+        <input type="hidden" name="currency" value="USD">
+        <input type="hidden" name="sandbox" value="true"> <!-- Set to false for production -->
+        <input type="hidden" name="redirect_url" value="URL_TO_REDIRECT_AFTER_PAYMENT">
+        <input type="hidden" name="user_email" value="">
+        <input type="submit" value="Subscribe">
+    </form>
+</body>
+</html>
