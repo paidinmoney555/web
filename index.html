@@ -4,18 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subscription Payment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        .item-description {
+            margin-bottom: 20px;
+        }
+        .subscribe-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .subscribe-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
-    <h1>Subscribe to Our Service</h1>
-    <form action="YOUR_XSOLLA_API_ENDPOINT" method="post">
-        <input type="hidden" name="access_token" value="YOUR_XSOLLA_ACCESS_TOKEN">
-        <input type="hidden" name="project_id" value="YOUR_XSOLLA_PROJECT_ID">
-        <input type="hidden" name="plan_id" value="SUBSCRIPTION_PLAN_ID">
-        <input type="hidden" name="currency" value="USD">
-        <input type="hidden" name="sandbox" value="true"> <!-- Set to false for production -->
-        <input type="hidden" name="redirect_url" value="URL_TO_REDIRECT_AFTER_PAYMENT">
-        <input type="hidden" name="user_email" value="">
-        <input type="submit" value="Subscribe">
-    </form>
+    <div class="container">
+        <h1>Subscribe to Our Service</h1>
+        <p class="item-description">Unlock premium features and exclusive content.</p>
+        <form action="YOUR_XSOLLA_API_ENDPOINT" method="post">
+            <input type="hidden" name="access_token" value="YOUR_XSOLLA_ACCESS_TOKEN">
+            <input type="hidden" name="project_id" value="YOUR_XSOLLA_PROJECT_ID">
+            <input type="hidden" name="plan_id" value="SUBSCRIPTION_PLAN_ID">
+            <input type="hidden" name="currency" value="USD">
+            <input type="hidden" name="sandbox" value="true"> <!-- Set to false for production -->
+            <input type="hidden" name="redirect_url" value="URL_TO_REDIRECT_AFTER_PAYMENT">
+            <input type="hidden" name="user_email" value="">
+            <button type="submit" class="subscribe-btn">Subscribe</button>
+        </form>
+    </div>
 </body>
 </html>
